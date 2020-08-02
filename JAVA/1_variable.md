@@ -3,6 +3,7 @@
 : 하나의 값을 저장할 수 있는 기억공간(메모리 공간)
 
 메모리 종류(타입) | 메모리 별명(변수)
+--- | --- 
 [Data type] | [Variables]
 ex) int | ex) i
 기본형 (Primitive type) | 참조형 (Reference type)

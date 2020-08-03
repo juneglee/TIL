@@ -1,5 +1,6 @@
-# 변수 (Variable)
+# Variable
 
+### 변수 (Variable)의 정의
 : 하나의 값을 저장할 수 있는 기억공간(메모리 공간)
 
 메모리 종류(타입) | 메모리 별명(변수)
@@ -7,17 +8,15 @@
 [Data type] | [Variables]
 ex) int | ex) i
 기본형 (Primitive type) | 참조형 (Reference type)
-8개 (byte, short, int, long, char, boolean, float, double) <br>
-- 실제 값을 저장 | 기본형을 제외한 나머지(String, Thread) <br>
-- 다른 메모리의 주소를 저장하는 변수
+8개 (byte, short, int, long, char, boolean, float, double) <br> 실제 값을 저장 | 기본형을 제외한 나머지(String, Thread) <br>다른 메모리의 주소를 저장하는 변수
 
 ### 자바의 기본형 (Primitive type)
- | 1Byte (8bit) | 2Byte( 16bit) | 4Byte (32bit) | 8Byte (64bit)
---- | --- | --- | --- | ---
-논리형|boolean|||
-문자형||char|| 
-정수형|byte|short|int|long
-실수형||float|double
+|   | 1Byte (8bit) | 2Byte( 16bit) | 4Byte (32bit) | 8Byte (64bit) |
+| --- | --- | --- | --- | --- |
+| 논리형 | boolean |   |   |   |
+| 문자형 |   | char |   |   |
+| 정수형 | byte | short | int | long |
+| 실수형 |   | float | double |   |
 
 ### 변수의 저장
 ```java

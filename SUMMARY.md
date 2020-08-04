@@ -10,10 +10,9 @@
     * [Variable](java/basics/1_variable.md)
 * [python](python/README.md)
   * [String format](python/2_2_string_2.md)
-  * [2\_4\_String\_3](python/2_4_string_3.md)
+  * [String function](python/string-function.md)
   * [input\(variable\)](python/3_input-variable.md)
-  * [String format](python/2_3_string_2.md)
-  * [2\_2\_String\_1](python/2_2_string_1.md)
+  * [String Basic](python/string-basic.md)
   * [print\(\)](python/1_print.md)
   * [type\(\)](python/2_1_type.md)
 

@@ -1,4 +1,4 @@
-# 2\_4\_String\_3
+# String function
 
 ## String function
 

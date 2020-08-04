@@ -1,4 +1,4 @@
-# 2\_2\_String\_1
+# String Basic
 
 ## String Basic
 

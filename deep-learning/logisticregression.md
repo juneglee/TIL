@@ -90,6 +90,6 @@ epoch=2000, 기울기=1.9068, 절편=-12.9513
 epoch=2000, 기울기=1.9068, 절편=-12.9513
 epoch=2000, 기울기=1.9068, 절편=-12.9513
 ```
-![sigmoidfunction](../../img/DL/sigmoidfunction.png) <br>
+![logisticregression](../../img/DL/logisticregression.png) <br>
 
 -만약 여기에 입력 값이 추가되어 세개 이상의 입력 값을 다룬다면, 시그모이드 함수가 아니라 소프트맥스 (softmax)라는 함수를 써야 한다 

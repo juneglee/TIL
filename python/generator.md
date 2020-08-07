@@ -8,10 +8,8 @@
 def test():
     print("함수가 호출되었습니다.")
     yield test
-
 print("A 지점 통과")
 test()
-
 print("B 지점 통과")
 test()
 print(test())
@@ -22,6 +20,7 @@ print(test())
 ### 제너레이터 객체와 next() 함수 
 - next() 함수를 호출한 이후 yield 키워드를 만나지 못하고 함수가 끝나면 
 - StopIteration이라는 예외가 발생한다 
+
 ```python
 def test():
     print("A 지점 통과")

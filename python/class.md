@@ -103,8 +103,6 @@ for student in students:
 ```
 class 클래스 이름:
      클래스 내용 
-```
-```
 class Student:
 ```
 
@@ -236,7 +234,8 @@ for person in classroom:
         person.teach()
 ```
 ### 특수한 이름의 메소드 : __str__() 함수 
-- 객체를 문자열로 변환할 수 있으며, to_String() 함수를 대신하여 사용
+객체를 문자열로 변환할 수 있으며, to_String() 함수를 대신하여 사용
+
 ```python
 class Student:
     def __init__(self, name, korean, math, english, science):
@@ -245,20 +244,16 @@ class Student:
         self.math = math
         self.english = english
         self.science = science
-
     def get_sum(self):
         return self.korean + self.math +\
             self.english + self.science
-
     def get_average(self):
         return self.get_sum() / 4
-
     def __str__(self):
         return "{}\t{}\t{}".format(
             self.name,
             self.get_sum(),
             self.get_average()) 
-
 students = [
     Student("윤인성", 87, 98, 88, 95),
     Student("연하진", 92, 98, 96, 98),
@@ -267,13 +262,12 @@ students = [
     Student("윤아린", 95, 98, 98, 98),
     Student("윤명월", 64, 88, 92, 92)
 ]
-
 print("이름", "총점", "평균", sep="\t")
 for student in students:
     print(str(student))
 ```
 
-# 특수한 이름의 메소드 : 비교함수 
+### 특수한 이름의 메소드 : 비교함수 
 | 함수 | 정의 |
 | --- | --- |
 | eq | equal (같다) |

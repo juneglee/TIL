@@ -14,7 +14,7 @@
 
 ![backPropagation](../../img/DL/backPropagation.png) <br>
 
-신경망의 구현 과정
+신경망의 구현 과정<br>
 ![backPropagationProcess](../../img/DL/backPropagationProcess.png) <br>
 
 다층 퍼셉트론이 오차 역전파를 만나 신경망이 되고, 신경망은 xor 문제를 가볍게 해결하지만, 문제점이 생긴다 
@@ -25,7 +25,7 @@
 ### 계산 그래프 (computational graph)
 : 계산과정을 그래프로 표현하며, 우리가 잘아는 그래프 자료구조로 복수의 노드(node)와 에지(edge)로 표현
 
-ex) 슈퍼에서 사과를 2개 귤을 3개 샀습니다. 사과 1개에 100원 귤을 150원 이고, 소비세가 10% 일때 지불 금액을 구하시오
+ex) 슈퍼에서 사과를 2개 귤을 3개 샀습니다. 사과 1개에 100원 귤을 150원 이고, 소비세가 10% 일때 지불 금액을 구하시오<br>
 ![computationalGraph](../../img/DL/computationalGraph.png) <br>
 
 Tip) 계산을 왼쪽에서 오른족으로 진행하는 단계를 순전파 (forward propagation)라고 마혀, 순전파는 계산 그래프의 출발점부터 종착점으로의 전파이다
@@ -48,7 +48,7 @@ Tip) 계산을 왼쪽에서 오른족으로 진행하는 단계를 순전파 (fo
 ![chainRule](../../img/DL/chainRule.png) <br>
 - 다음과 같이 z와 t에 대해서, x에 대한 편미분을 통한 값을 합성함수를 이용할 수 있다는 것을 보여주고 있다.
 
-연쇄법칙을 계산 그래프로 나타내면 
+연쇄법칙을 계산 그래프로 나타내면<br> 
 ![chainRuleGraph](../../img/DL/chainRuleGraph.png) <br>
 : 순전파와는 반대 방향으로 국소적 미분을 곱하여 전달한다 
 

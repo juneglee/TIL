@@ -3,7 +3,7 @@
 ### series 
 : 시리즈 클래스는 1차원의 배열 구조를 가진다. 배열과 다른 점은 인덱스 레이블(label)에 이름을 붙여 처리 할 수 있다는 점이다 
 
-- 시리즈 객체 만들기
+#### 시리즈 객체 만들기
 
 ```python
 import pandas as pd
@@ -23,7 +23,7 @@ print(s.values)
 
 ---
 
-- 시리즈의 메타 정보 확인 
+#### 시리즈의 메타 정보 확인 
 : index의 속성확인, 배열의 형상, 차원, 크기 정보를 속성으로 관리할 수 있다 
 
 ```python
@@ -38,7 +38,7 @@ print(s.size) # 4
 
 ---
 
-- 색인 검색 
+#### 색인 검색 
 
 ```python
 import pandas as pd
@@ -49,7 +49,7 @@ print(s[0], s['a']) # 1 1
 
 ---
 
-- 슬라이스 검색 
+#### 슬라이스 검색 
 
 ```python
 import pandas as pd
@@ -75,7 +75,7 @@ print(np.may_share_memory(sv, s)) # True
 
 ---
 
-- 레이블을 사용해서 색인 연산으로 원소 추가 
+#### 레이블을 사용해서 색인 연산으로 원소 추가 
 
 ```python
 import pandas as pd
@@ -94,7 +94,7 @@ print(d)
 ### 데이터프레임(DataFrame) 구조
 : 시리즈는 1차원 배열이므로 행 단위로 처리하지만, 데이터프레임은 2차원 배열이라 열을 기준으로 처리한다.
 
-- 데이터 프레임 생성
+#### 데이터 프레임 생성
 
 ```python
 import pandas as pd
@@ -110,7 +110,7 @@ print(type(df.values)) # <class 'numpy.ndarray'>
 
 ---
 
-- 행과 열의 인덱스 정보와 배열의 메타 정보 확인 
+#### 행과 열의 인덱스 정보와 배열의 메타 정보 확인 
 
 ```python
 import pandas as pd
@@ -125,7 +125,7 @@ print(df.size) # 8
 
 ---
 
-- 색인 검색 
+#### 색인 검색 
 
 ```python
 import pandas as pd
@@ -144,7 +144,7 @@ print(df['a'])
 
 ---
 
-- 데이터프레임의 행으로 검색 
+#### 데이터프레임의 행으로 검색 
 : 데이터 프레임의 행을 검색하려면 별도의 인덱서(indexer)를 사용, 행의 레이블로 색인 연삭할때는 loc 인덱서를 사용 
 
 ```python
@@ -167,7 +167,7 @@ print(df.loc['a': ,'b': 'c'])
 
 ---
 
-- 슬라이스 검색을 통한 부분 집합일 때 메모리 공유 
+#### 슬라이스 검색을 통한 부분 집합일 때 메모리 공유 
 
 ```python
 import pandas as pd
@@ -181,7 +181,7 @@ print(np.may_share_memory(dfv, df)) # true
 
 ---
 
-- 인덱스 숫자 정보로 검색 
+#### 인덱스 숫자 정보로 검색 
 : 데이터 프레임의 행을 조회할 때 정수 인덱스로 색인 연산을 할 수 있다. <br>
 이 때는 정수 인덱스로 검색할 수 있는 인덱서 iloc를 사용해야 한다 
 

@@ -35,3 +35,20 @@ public class SelectionSort {
 	}
 }
 ```
+
+```python
+def selectionSort(a):
+
+    n = len(a)
+    for i in range(0, n - 1):
+        min_idx = i
+        for j in range(i + 1, n):
+            if a[j] < a[min_idx]:
+                min_idx = j
+        a[i], a[min_idx] = a[min_idx], a[i] # swap
+        print(a)     # 정렬 과정 출력하기
+ 
+d = [1, 10, 5, 8, 7, 6, 4, 3, 2, 9]
+selectionSort(d)
+print(d)
+```

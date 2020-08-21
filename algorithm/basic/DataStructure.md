@@ -1,7 +1,7 @@
 ### Data Structure
 
 ### 자료구조의 분류
-![DataStructure](../../img/algorithm/DataStructure.png) <br>
+![DataStructure](../../../img/algorithm/DataStructure.png) <br>
 
 - 선형구조
 : 데이터를 저장할 때 연속적인 기억 공간에 배정하는 자료구조(배열, 스택, 큐, 데크, 연결리스트)
@@ -14,6 +14,6 @@
 O(1) < O(logn) < O(n) < O(nlogn) < O(n^2) < O(n^3) < O(2^n) < O(n!) <br>
 - O(1)이 가장 빠르며 해쉬 검색 알고리즘에서 사용된다.
 
-![TimeComplexity](../../img/algorithm/TimeComplexity.png) <br>
+![TimeComplexity](../../../img/algorithm/TimeComplexity.png) <br>
 
-[reference:naver]: (https://d2.naver.com/helloworld/0315536  )
+[Reference : naver d2](https://d2.naver.com/helloworld/0315536)

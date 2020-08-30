@@ -117,3 +117,58 @@ build_model()
 - call : 순반향 전달 정의, 계층이 호출되고 함수 형식으로 체인되는 곳이다 
 
 - 선택적으로 get_config()를 사용해 게층을 직렬화(serialize)할 수 있고, from_config()를 사용하면 역질렬화(deserialize)할 수 있다 
+
+### 콜백 (callback)
+: 콜백은 훈련 중에 독작을 확장하거나 수정하고자 모델로 전달하는 객체
+
+- ModelCheckPoint : 정기적으로 모델의 체크 포인트를 저장하고 문제가 발생할 때 복구하는데 사용 
+- LearningRateScheduler : 최적화하는 동안 학습률을 동적으로 변경할 때 사용 
+- EarlyStopping : 검증 성능이 한동안 개선되지 않을 경우 훈련을 중단할 때 사용 
+- TensorBoard : 텐서보드를 사용해 모델의 행동을 모니터링할 때 사용 
+
+### 모델과 가중치 저장 
+
+- 가중치를 텐서플로 체크포인트 파일로 저장 
+
+```python 
+model.save_weight('./weigth/model') # 저장
+model.load_weight(file_path) # 복원
+```
+
+- 가중치 이외의 모델은 JSON 형식으로 직렬화 할 수 있다 
+
+```python 
+json_string = model.to_json() # 저장
+model = tf.keras.model_from_json(json_string) # 복원
+```
+
+- YAML으로 직렬화 
+
+```python 
+yaml_string = model.to_yaml() # 저장
+model = tf.keras.model_from_yaml(yaml_string) # 복원
+```
+
+- 모델을 가중치와 최적화 매개변수와 함께 저장
+
+```python
+model.save('model.hs') # 저장
+model = tf.keras.models.load_model('model.hs') # 복원 
+```
+
+### 데이터셋 라이브러리
+
+- 생성 
+	1. from_tensor_slices() : 개별(또는 다중) 넘파이(또는 텐서)를 받고 배치를 지원
+	2. from_tensor() : 1과 유사하지만 배치를 지원하지 않는다
+	3. from_generator() : 생성자 함수에서 입력을 취한다
+
+- 변환
+	1. batch() : 순차적으로 데이터셋을 지정한 크기로 분할
+	2. repeat() : 데이터를 복제
+	3. shuffle() : 데이터를 무작위로 섞는다 
+	4. map() : 데이터에 함수를 적용
+	5. filter() : 데이터를 거르고자 함수를 적요
+
+- 반복
+	1. next_batch = iterator.get_next()

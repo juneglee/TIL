@@ -159,16 +159,16 @@ model = tf.keras.models.load_model('model.hs') # 복원
 ### 데이터셋 라이브러리
 
 - 생성 
-	1. from_tensor_slices() : 개별(또는 다중) 넘파이(또는 텐서)를 받고 배치를 지원
-	2. from_tensor() : 1과 유사하지만 배치를 지원하지 않는다
-	3. from_generator() : 생성자 함수에서 입력을 취한다
+	- from_tensor_slices() : 개별(또는 다중) 넘파이(또는 텐서)를 받고 배치를 지원
+	- from_tensor() : 1과 유사하지만 배치를 지원하지 않는다
+	- from_generator() : 생성자 함수에서 입력을 취한다
 
 - 변환
-	1. batch() : 순차적으로 데이터셋을 지정한 크기로 분할
-	2. repeat() : 데이터를 복제
-	3. shuffle() : 데이터를 무작위로 섞는다 
-	4. map() : 데이터에 함수를 적용
-	5. filter() : 데이터를 거르고자 함수를 적요
+	- batch() : 순차적으로 데이터셋을 지정한 크기로 분할
+	- repeat() : 데이터를 복제
+	- shuffle() : 데이터를 무작위로 섞는다 
+	- map() : 데이터에 함수를 적용
+	- filter() : 데이터를 거르고자 함수를 적요
 
 - 반복
-	1. next_batch = iterator.get_next()
+	- next_batch = iterator.get_next()

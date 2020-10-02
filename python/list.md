@@ -38,6 +38,7 @@ print(list_b[1][1]) # 5
 ### 리스트 연선자 : 연결(+), 반복(*), len()
 
 - 리스트 연산자 
+
 ```python
 list_a = [1, 2, 3]
 list_b = [4, 5, 6]
@@ -48,12 +49,14 @@ print()
 ```
 
 - 기본 연산자 :  연결(+) , 반복(*)
+
 ```python
 print("list_a + list_b =", list_a + list_b)
 print("list_a * 3 =", list_a * 3)
 print()
 ```
 - 길이 구하기 : len() 
+
 ```python
 print("len(list_a) = ", len(list_a))
 ```
@@ -67,7 +70,9 @@ print("len(list_a) = ", len(list_a))
 list_a = [1, 2, 3]
 list_b = [1, 2, 3]
 ```
+
 - 리스트 뒤에 요소 추가하기 : append ()
+
 ```python
 list_a.append(4)
 list_a.append(5)
@@ -75,12 +80,15 @@ print(list_a) # [1, 2, 3, 4, 5]
 print("------------------")
 ```
 - 한번에 여러 요소를 추가하고 싶을 때는 extend()
+
 ```python
 list_b.extend([4, 5, 6]) 
 print(list_b) # [1, 2, 3, 4, 5]
 print("------------------")
 ```
+
 - 리스트 중간에 요소 추가하기 : insert()
+
 ```python
 list_a.insert(0, 10)
 print(list_a) # [10, 1, 2, 3, 4, 5]
@@ -125,6 +133,7 @@ print("del list_d[3:]:", list_d) # [0, 1, 2]
 ### 값으로 제거하기 : remove
 - 사용법 
 - 리스트.remove(값)
+
 ```python
 list_e = [1, 2, 1, 2]
 list_e.remove(2)
@@ -134,13 +143,16 @@ print(list_e) # [1, 1, 2]
 ### 모두 제거하기 : clear
 - 사용법
 - 리스트.clear()
+
 ```python
 list_f = [0, 1, 2, 3, 4, 5]
 list_f.clear()
 print(list_f) #[]
 ```
+
 ### 리스트 정렬 : sort
 - 리스트의 요소를 순서대로 정렬한다 (문자 역시 알파벳 순서로 정렬)
+
 ```python
 a = [1, 4, 3, 2]
 a.sort()
@@ -154,6 +166,7 @@ print(b)
 
 ### 리스트 뒤집기 : reverse
 - reverse 함수는 리스트를 역순으로 뒤집어 준다(단, 정렬해서 리스트를 뒤집는 것이 아니다)
+
 ```python
 a = [1, 4, 3, 2]
 a.sort()
@@ -163,6 +176,7 @@ print(a)
 
 ### 위치 반환 : index
 - 리스트에 x 값이 있으면 x의 위치 값을 돌려준다 
+
 ```python
 a = [1, 2, 3]
 a.index(3) 
@@ -188,4 +202,22 @@ print(273 not in list_a) # False
 print(99 not in list_a) # True
 print(100 not in list_a) # True
 print(52 not in list_a) # False
+```
+
+### list와 tuple의 비교
+- 리스트와 튜플의 기술적 차이점은 불변성에 있다. 리스트는 가변적(mutable, 변경 가능)이며 튜플은 불변적(immutable, 변경 불가)이다. 
+
+```python 
+list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+tuple = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+list[0] = "Hello"  # various_list = ["Hello", 2, 3, 4, 5, 6, 7, 8, 9, 10]
+tuple[0] = "Hello" # 'tuple' object does not support item assignment
+```
+
+- 따라서, ist는 딕셔너리의 key값(해쉬값)으로 쓸 수 없지만, tuple은 가능하다.
+
+```python 
+my_dict = {list: "List"}  # TypeError: unhashable type: 'list'
+my_dict = {tuple: "Tuple"}  # Ture
 ```

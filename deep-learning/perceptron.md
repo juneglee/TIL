@@ -24,21 +24,32 @@
 
 * AND 함수 \(가중치와 편향을 도입\)
 
-  \`\`\`python
+```python
 
-  import numpy as np
+import numpy as np
 
-def AND\(x1, x2\): x = np.array\(\[x1, x2\]\) w = np.array\(\[0.5, 0.5\]\) \# 가중치 b = -0.7 \# 편향 : 뉴런이 얼마나 쉽게 활성화 되는지를 결정 tmp = np.sum\(w\*x\) + b if tmp &lt;= 0: return 0 else: return 1 if **name** == '**main**': for xs in \[\(0, 0\), \(1, 0\), \(0, 1\), \(1, 1\)\]: y = AND\(xs\[0\], xs\[1\]\) print\(str\(xs\) + " -&gt; " + str\(y\)\)
 
-## \(0, 0\) -&gt; 0
+def AND(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([0.5, 0.5])
+    b = -0.7
+    tmp = np.sum(w*x) + b
+    if tmp <= 0:
+        return 0
+    else:
+        return 1
 
-## \(1, 0\) -&gt; 0
+if __name__ == '__main__':
+    for xs in [(0, 0), (1, 0), (0, 1), (1, 1)]:
+        y = AND(xs[0], xs[1])
+        print(str(xs) + " -> " + str(y))
+        
+# (0, 0) -> 0
+# (1, 0) -> 0
+# (0, 1) -> 0
+# (1, 1) -> 1
+```
 
-## \(0, 1\) -&gt; 0
-
-## \(1, 1\) -&gt; 1
-
-```text
 - NAND 게이트
 ```python
 import numpy as np
@@ -64,21 +75,31 @@ if __name__ == '__main__':
 
 * OR 게이트 
 
-  \`\`\`python
+```python
+import numpy as np
 
-  import numpy as np
 
-def OR\(x1, x2\): x = np.array\(\[x1, x2\]\) w = np.array\(\[0.5, 0.5\]\) b = -0.2 tmp = np.sum\(w\*x\) + b if tmp &lt;= 0: return 0 else: return 1 if **name** == '**main**': for xs in \[\(0, 0\), \(1, 0\), \(0, 1\), \(1, 1\)\]: y = OR\(xs\[0\], xs\[1\]\) print\(str\(xs\) + " -&gt; " + str\(y\)\)
+def OR(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([0.5, 0.5])
+    b = -0.2
+    tmp = np.sum(w*x) + b
+    if tmp <= 0:
+        return 0
+    else:
+        return 1
 
-## \(0, 0\) -&gt; 0
+if __name__ == '__main__':
+    for xs in [(0, 0), (1, 0), (0, 1), (1, 1)]:
+        y = OR(xs[0], xs[1])
+        print(str(xs) + " -> " + str(y))
+        
+# (0, 0) -> 0
+# (1, 0) -> 1
+# (0, 1) -> 1
+# (1, 1) -> 1
+```
 
-## \(1, 0\) -&gt; 1
-
-## \(0, 1\) -&gt; 1
-
-## \(1, 1\) -&gt; 1
-
-```text
 ### 다층 퍼셉트론 
 : 기존이 퍼셉트론으로는 XOR를 해결할 수 없어 다층 퍼셉트론으로 그 문제를 해결하였다.
 즉, 좌표 평면 자체에 변화를 주어, 두개의 퍼셉트론을 한번에 계산가능하게 만들었으며,

@@ -1,12 +1,14 @@
 # function
 
 사용법
-```
+
+```text
 def 함수이름(): 
-    문장 
+    문장
 ```
 
-### 기본적인 함수 
+## 기본적인 함수
+
 ```python
 def print_3_times():
     print("안녕하세요")
@@ -15,7 +17,8 @@ def print_3_times():
 print_3_times()
 ```
 
-### 키워드 매개변수 
+## 키워드 매개변수
+
 ```python
 # 가변 매개변수가 기본 매개변수보다 앞에 올 때 
 def print_n_times( *values, n=2):     
@@ -34,7 +37,8 @@ def print_n_times(n=2, *values):
 print_n_times("안녕하세요", "즐거운", "파이썬 프로그래밍")
 ```
 
-### 키워드 매개 변수 
+## 키워드 매개 변수
+
 ```python
 def print_n_times( *values, n=2):     
     for i in range(n):             
@@ -46,8 +50,9 @@ print_n_times("안녕하세요", "즐거운", "파이썬 프로그래밍", 3)
 # 즐거운
 # 파이썬 프로그래밍
 # 3 
-# => 다음과 같이 3이 출력되며, 문자열은 두번을 반복한다 
+# => 다음과 같이 3이 출력되며, 문자열은 두번을 반복한다
 ```
+
 ```python
 def print_n_times(*values, n=2):
     for i in range(n):
@@ -58,10 +63,11 @@ print_n_times("안녕하세요", "즐거운", "파이썬 프로그래밍", n=3)
 # 안녕하세요     
 # 즐거운
 # 파이썬 프로그래밍
-# => 문자열이 세번 반복한다 
+# => 문자열이 세번 반복한다
 ```
 
-### 기본 매개변수 중에서 필요한 값만 입력하기 
+## 기본 매개변수 중에서 필요한 값만 입력하기
+
 ```python
 # 여러 함수 호출 형태 
 def test(a, b=10, c=100):
@@ -76,7 +82,8 @@ test(c=10, a=100, b=200)
 test(10, c=200)
 ```
 
-### 리턴
+## 리턴
+
 ```python
 # 자료 없이 리턴하기 
 def return_test():
@@ -98,18 +105,21 @@ value = return_test()
 print(value) # None
 ```
 
-### 기본적인 함수의 활용
+## 기본적인 함수의 활용
+
 사용법
-```
+
+```text
 def 함수(매개변수):
     변수 = 초깃값
     여러 가지 처리 
     여러 가지 처리 
     여러 가지 처리 
-    return 변수 
+    return 변수
 ```
 
-### 범위 내부의 정수를 모두 더하는 함수 
+## 범위 내부의 정수를 모두 더하는 함수
+
 ```python
 def sum_all(start, end):
     output = 0
@@ -123,7 +133,8 @@ print("500 to 1000:", sum_all(500, 1000)) # 500 to 1000: 375750
 print("---------------------------------------")
 ```
 
-### 기본 매개변수와 키워드 매개변수를 활용해 범위의 정수를 더하는 정수 
+## 기본 매개변수와 키워드 매개변수를 활용해 범위의 정수를 더하는 정수
+
 ```python
 def sum_all(start=0, end=100, step=1):
     output = 0
@@ -135,7 +146,8 @@ print("B.", sum_all(end=100))         # B. 5050
 print("C.", sum_all(end=100, step=2)) # C. 2550
 ```
 
-### 재귀함수 
+## 재귀함수
+
 ```python
 # 반복문으로 팩토리얼 구하기 
 def factorial(n):
@@ -164,8 +176,9 @@ print("4!:", factorial(4))
 print("5!:", factorial(5))
 ```
 
-### 피보나치 수열
-- n번째 수열 = (n-1) 번째 수열 + (n-2) 번째 수열 
+## 피보나치 수열
+
+* n번째 수열 = \(n-1\) 번째 수열 + \(n-2\) 번째 수열 
 
 ```python
 # 재귀 함수로 구현한 피보나치 수열(1)
@@ -197,18 +210,20 @@ def fibonacci(n):
 fibonacci(10)
 print("---")
 print("fibonacci(10) 계산에 활용된 덧셈 횟수는 {}번입니다.".format(counter))
-# 트리 형태에서 각각의 지점을 노드, 노드 중에 가장 마지막 단계의 노드를 리프라고 부른다 
+# 트리 형태에서 각각의 지점을 노드, 노드 중에 가장 마지막 단계의 노드를 리프라고 부른다
 ```
 
-### 메모화 
-- 딕셔너리를 사용해서 한번 계산한 값을 지정하는 것을 메모라고 하며, 
-- 메모화를 사용하면 실행 후 곧바로 결과를 출력할 정도로 속도가 빨라진다.
-```python
-dictionary = {
+## 메모화
+
+* 딕셔너리를 사용해서 한번 계산한 값을 지정하는 것을 메모라고 하며, 
+* 메모화를 사용하면 실행 후 곧바로 결과를 출력할 정도로 속도가 빨라진다.
+
+  ```python
+  dictionary = {
     1: 1,
     2: 2
-}
-def fibonacci(n):
+  }
+  def fibonacci(n):
     if n in dictionary:
         # 메모 되어 있으면 메모된 값 리턴
         return dictionary[n]
@@ -217,14 +232,15 @@ def fibonacci(n):
         output = fibonacci(n - 1) + fibonacci(n - 2)
         dictionary[n] = output
         return output
-print("fibonacci(10):", fibonacci(10))
-print("fibonacci(20):", fibonacci(20))
-print("fibonacci(30):", fibonacci(30))
-print("fibonacci(40):", fibonacci(40))
-print("fibonacci(50):", fibonacci(50))
-```
+  print("fibonacci(10):", fibonacci(10))
+  print("fibonacci(20):", fibonacci(20))
+  print("fibonacci(30):", fibonacci(30))
+  print("fibonacci(40):", fibonacci(40))
+  print("fibonacci(50):", fibonacci(50))
+  ```
 
-###  코드 유지 보수 
+## 코드 유지 보수
+
 ```python
 # p 태그로 감싸는 함수 
 def p(content):
@@ -236,13 +252,12 @@ print(p("안녕하세요"))
 print(p("간단한 HTML 태그를 만드는 예입니다."))
 ```
 
-###  함수 고급
-튜플 : 함수와 함께 많이 사용되는 리스트와 비슷한 자료형으로, 
-       리스트와 다른점은 한번 결정되면 요소를 바꿀 수 없다는 것
-람다 : 매개 변수로 함수를 전달하기 위해 함수 구문을 작성하는 것이 번거롭고, 
-       코드 공간 낭비라는 생각이 들때 함수를 간단하고 쉽게 선언하는 방법
+## 함수 고급
 
-### 튜플 
+튜플 : 함수와 함께 많이 사용되는 리스트와 비슷한 자료형으로, 리스트와 다른점은 한번 결정되면 요소를 바꿀 수 없다는 것 람다 : 매개 변수로 함수를 전달하기 위해 함수 구문을 작성하는 것이 번거롭고, 코드 공간 낭비라는 생각이 들때 함수를 간단하고 쉽게 선언하는 방법
+
+## 튜플
+
 ```python
 # 리스트와 튜플의 특이한 사용
 [a, b] = [10, 20]
@@ -293,12 +308,15 @@ def print_hello():
 call_10_times(print_hello)
 ```
 
-### filter() 함수와 map() 함수
-함수를 매개변수로 전달하는 대표적인 표준함수 
-```
+## filter\(\) 함수와 map\(\) 함수
+
+함수를 매개변수로 전달하는 대표적인 표준함수
+
+```text
 map(함수, 리스트)
 filter(함수, 리스트)
 ```
+
 ```python
 def power(item):
     return item * item
@@ -307,6 +325,7 @@ def under_3(item):
 
 list_input_a = [1, 2, 3, 4, 5]
 ```
+
 ```python
 # map() 함수를 사용합니다.
 output_a = map(power, list_input_a)
@@ -322,8 +341,10 @@ print("filter(under_3, list_input_a):", list(output_b))
 print("+========================================")
 ```
 
-### 람다
+## 람다
+
 lambda 매개변수 : 리턴값
+
 ```python
 # 람다 
 power = lambda x: x * x
@@ -344,6 +365,7 @@ print("filter(under_3, list_input_a):", output_b)
 print("filter(under_3, list_input_a):", list(output_b))
 # filter(under_3, list_input_a): [1, 2]
 ```
+
 ```python
 # 인라인 람다
 list_input_a = [1, 2, 3, 4, 5]
@@ -357,3 +379,4 @@ print("# filter() 함수의 실행 결과")
 print("filter(under_3, list_input_a):", output_b)
 print("filter(under_3, list_input_a):", list(output_b))
 ```
+

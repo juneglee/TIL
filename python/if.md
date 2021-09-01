@@ -1,5 +1,8 @@
-#  if 
-```
+# if
+
+## if
+
+```text
 If <조건문>:
     <수행할 문장1> 
     <수행할 문장2>
@@ -16,11 +19,13 @@ elif <조건문>:
 else:
    <수행할 문장1>
    <수행할 문장2>
-   ... 
+   ...
 ```
-- 조건문 다음에 콜론(:)을 잊지 말자!
+
+* 조건문 다음에 콜론\(:\)을 잊지 말자!
 
 ### if 조건문의 기본사용
+
 ```python
 number = input("정수 입력> ")
 number = int(number)
@@ -37,6 +42,7 @@ if number < 0:
 ```
 
 ### if~else 와 elif
+
 ```python
 # if 조건문에 else 구문을 추가해서 짝수와 홀수 구분
 number = input("정수 입력> ")
@@ -49,6 +55,7 @@ else:
     # 조건이 거짓일 때, 즉 홀수 조건
     print("홀수입니다")
 ```
+
 ```python
 pocket = ['paper', 'cellphone']
 card = True
@@ -61,7 +68,8 @@ else:
 # 카드로 택시를 타고가라
 ```
 
-### if 조건문을 효율적으로 사용하기 
+### if 조건문을 효율적으로 사용하기
+
 ```python
 score = float(input("학점 입력> "))
 
@@ -111,23 +119,30 @@ else:
 ```
 
 ### False로 변환되는 값
-- None / '0' / 빈 컨테이너는 False로 반환된다.
-```python
-# if 조건문에 0 넣기
-if 0:
-    print("0은 True로 변환됩니다")
-else:
-    print("0은 False로 변환됩니다")
-# 0은 False로 변환됩니다
 
-# if 조건문에 빈 문자열 넣기
-if "":
-    print("빈 문자열은 True로 변환됩니다")
-else:
-    print("빈 문자열은 False로 변환됩니다")
-# 빈 문자열은 False로 변환됩니다
-```
+* None / '0' / 빈 컨테이너는 False로 반환된다.
 
+  \`\`\`python
+
+  **if 조건문에 0 넣기**
+
+  if 0:
+
+    print\("0은 True로 변환됩니다"\)
+
+  else:
+
+    print\("0은 False로 변환됩니다"\)
+
+  **0은 False로 변환됩니다**
+
+## if 조건문에 빈 문자열 넣기
+
+if "": print\("빈 문자열은 True로 변환됩니다"\) else: print\("빈 문자열은 False로 변환됩니다"\)
+
+## 빈 문자열은 False로 변환됩니다
+
+```text
 ### Pass 키워드 
 - 골격을 잡아놓고 나중에 처리하기 위해서 만들어짐
 ```python
@@ -150,10 +165,11 @@ else:
 if number > 0:
     raise NotImplementedError 
 else:
-    raise NotImplementedError 
+    raise NotImplementedError
 ```
 
-### 날짜/시간 활용하기 (if, format)
+### 날짜/시간 활용하기 \(if, format\)
+
 ```python
 import datetime
 now = datetime.datetime.now()
@@ -193,7 +209,8 @@ if now.month == 12 or 1 <= now.month <= 2:
     print("이번 시간은 {}월로 겨울입니다.".format(now.month))
 ```
 
-### elif를 이용하여 계절구하기 
+### elif를 이용하여 계절구하기
+
 ```python
 import datetime
 
@@ -212,7 +229,8 @@ else:
     print("현재는 겨울입니다.")
 ```
 
-### 끝자리로 짝수와 홀수 구분하기 
+### 끝자리로 짝수와 홀수 구분하기
+
 ```python
 number = input("정수 입력> ")
 
@@ -247,3 +265,4 @@ if number % 2 == 0:
 if number % 2 == 1:
     print("홀수 입니다")
 ```
+
